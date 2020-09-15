@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P id="display">Display content</P>
+    <button onclick="displayContent()">Click Me</button>
+
+
+<script>
+const calendars= [
+    {month: "Jan", weeks: 5},
+    {month: "Feb", weeks: 5},
+    {month: "Mar", weeks: 5},
+    {month: "Apr", weeks: 5},
+    {month: "May", weeks: 5},
+    {month: "Jun", weeks: 5},
+    {month: "Jul", weeks: 5},
+    {month: "Aug", weeks: 5},
+    {month: "Sep", weeks: 5},
+    {month: "Oct", weeks: 5},
+    {month: "Nov", weeks: 5},
+    {month: "Dec", weeks: 5}
+];
+const days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+ // for
+for(let i = 0; i < calendars.length; i++) {
+  console.log(calendars[i]);
+};
+// let
+let calDays = [];
+for(let x = 0; x < days.length; x++) {
+  if(days[x] <= 30) {
+   calDays.push(days[x]);
+}
+}
+console.log(calDays);
+// map
+const myCalendar = calendars.map(function(cal){
+	return cal.month;
+});
+console.log(myCalendar);
+// reduce
+const daySum = days.reduce(function(total, day) {
+    return total + day;
+}, 0);
+console.log(daySum);
+    </script>
+</body>
+</html>
